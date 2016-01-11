@@ -1,17 +1,25 @@
 angular.module('directoryApp', [])
-        .controller('directoryController', function ($scope) {
-            $scope.list = [
-                {name: 'Ion', age: 29},
-                {name: 'Vasile', age: 49},
-                {name: 'Trei', age: 25},
-                {name: 'Gicu', age: 33}
+        .controller('directoryController', function () {
+
+            var dirList = this;
+
+            dirList.list = [
+                {name: 'asd', age: 29},
+                {name: 'fgh', age: 49},
+                {name: 'jkl', age: 25},
+                {name: 'mmno', age: 33}
             ];
 
-            $scope.addPerson = function () {
-                //Add the object to the list.
-                $scope.list.push({name: $scope.name, age: $scope.age});
+            dirList.addPerson = function () {
+                //Add the object to the list
+                dirList.list.push({name: dirList.name, age: dirList.age});
                 //Reset name and age after submit
-                $scope.name = '';
-                $scope.age = 0;
+                dirList.name = '';
+                dirList.age = 0;
             }
         });
+
+
+
+
+     
